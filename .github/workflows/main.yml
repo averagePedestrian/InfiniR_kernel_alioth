@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: dabao1955/kernel_build_action@main
+      uses: averagePedestrian/kernel_build_action@main
       with:
           kernel-url: https://github.com/averagePedestrian/InfiniR_kernel_alioth
           kernel-dir: InfiniR_kernel_alioth
@@ -22,6 +22,7 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
+          ksu: true
           ksu-version: legacy
           ksu-other: true
           ksu-url: https://github.com/backslashxx/KernelSU
