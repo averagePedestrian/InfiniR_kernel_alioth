@@ -26,7 +26,7 @@ jobs:
           ksu-other: true
           ksu-url: https://github.com/backslashxx/KernelSU
           android-version: 14
-          aosp-clang-version: r445002
+          aosp-clang-version: r487747c
           anykernel3: true
           anykernel3-url: https://github.com/averagePedestrian/AnyKernel3
           release: true
