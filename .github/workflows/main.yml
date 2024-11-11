@@ -22,7 +22,6 @@ jobs:
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
-          ksu: true
           ksu-version: legacy
           ksu-other: true
           ksu-url: https://github.com/backslashxx/KernelSU
