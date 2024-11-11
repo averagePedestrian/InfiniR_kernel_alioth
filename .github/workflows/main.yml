@@ -1,2 +1,33 @@
-- name: Android Kernel Build Action
-  uses: dabao1955/kernel_build_action@v1.7.0
+# A simple action usage
+name: Build Kernel
+on:
+  workflow_dispatch:
+
+jobs:
+  Build-Kernel:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+    - name: Build Kernel
+      uses: dabao1955/kernel_build_action@main
+      with:
+          kernel-url: https://github.com/averagePedestrian/InfiniR_kernel_alioth
+          kernel-dir: InfiniR_kernel_alioth
+          kernel-branch: susfs4ksu-v1.4.2
+          config: alioth_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          ksu: true
+          ksu-other: true
+          ksu-url: https://github.com/backslashxx/KernelSU
+          android-version: 14
+          aosp-clang-version: r445002
+          anykernel3: true
+          anykernel3-url: https://github.com/averagePedestrian/AnyKernel3
+          release: true
+          access-token: ${{ secrets.ACCESS_TOKEN }}
