@@ -17,11 +17,12 @@ jobs:
       with:
           kernel-url: https://github.com/averagePedestrian/InfiniR_kernel_alioth
           kernel-dir: InfiniR_kernel_alioth
-          kernel-branch: susfs4ksu-v1.4.2
+          kernel-branch: ksu-legacy
           config: alioth_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
+          extra-cmd: LLVM=1
           ksu: true
           ksu-version: legacy
           ksu-other: true
