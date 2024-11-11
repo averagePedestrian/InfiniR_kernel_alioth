@@ -23,6 +23,7 @@ jobs:
           aosp-gcc: true
           aosp-clang: true
           ksu: true
+          ksu-version: legacy
           ksu-other: true
           ksu-url: https://github.com/backslashxx/KernelSU
           android-version: 14
