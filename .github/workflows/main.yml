@@ -13,11 +13,11 @@ jobs:
 
     steps:
     - name: Build Kernel
-      uses: averagePedestrian/kernel_build_action@main
+      uses: zenwav/kernel_build_action@main
       with:
-          kernel-url: https://github.com/averagePedestrian/InfiniR_kernel_alioth
+          kernel-url: https://github.com/zenwav/InfiniR_kernel_alioth
           kernel-dir: InfiniR_kernel_alioth
-          kernel-branch: ksu-legacy
+          kernel-branch: 15.0-alioth
           config: alioth_defconfig
           arch: arm64
           aosp-gcc: true
@@ -26,10 +26,10 @@ jobs:
           ksu: true
           ksu-version: legacy
           ksu-other: true
-          ksu-url: https://github.com/backslashxx/KernelSU
+          ksu-url: https://github.com/rifsxd/KernelSU-Next
           android-version: 14
           aosp-clang-version: r487747c
           anykernel3: true
-          anykernel3-url: https://github.com/averagePedestrian/AnyKernel3
+          anykernel3-url: https://github.com/zenwav/AnyKernel3
           release: true
           access-token: ${{ secrets.ACCESS_TOKEN }}
